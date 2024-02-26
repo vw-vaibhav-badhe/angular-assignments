@@ -1,0 +1,32 @@
+<p>user-component works!</p>
+
+<div>------------------------</div>
+
+
+<div *ngIf="isShow">
+
+
+  <label [ngClass]="addClassForUsername()" >Username</label> : <span  [innerText]="userName" ></span>
+  <br>
+  <label [ngClass]="addClassForEmailId()" >Email Id</label> : <span [innerText]="emailId" ></span>
+
+
+</div>
+
+
+<div>------------------------</div>
+
+<button (click)="editUser()" >Edit</button>
+
+
+<div>------------------------</div>
+
+<label>Change Name : </label><input type="text" placeholder="Enter Name" [(ngModel)]="newName">
+<br>
+<label>{{newName}}</label>
+<div>------------------------</div>
+
+<button (click)="toggleDetails()" >{{isShow ? " Hide Details":"Show Details"}}</button>
+
+<div>------------------------</div>
+
